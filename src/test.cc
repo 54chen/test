@@ -27,8 +27,10 @@ void good_case1(){
 }
 
 void good_case2(){
-
-
+    a aa;
+    b bb;
+    aa.set_aa(1);
+    bb.mutable_aaa()->MergeFrom(aa);
 }
 
 int main()
