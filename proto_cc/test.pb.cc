@@ -38,7 +38,7 @@ void protobuf_AssignDesc_test_2eproto() {
   GOOGLE_CHECK(file != NULL);
   a_descriptor_ = file->message_type(0);
   static const int a_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(a, a_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(a, aa_),
   };
   a_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -53,7 +53,7 @@ void protobuf_AssignDesc_test_2eproto() {
       sizeof(a));
   b_descriptor_ = file->message_type(1);
   static const int b_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(b, aa_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(b, aaa_),
   };
   b_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -100,8 +100,8 @@ void protobuf_AddDesc_test_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\ntest.proto\022\004test\"\016\n\001a\022\t\n\001a\030\001 \002(\r\"\030\n\001b\022"
-    "\023\n\002aa\030\001 \002(\0132\007.test.a", 60);
+    "\n\ntest.proto\022\004test\"\017\n\001a\022\n\n\002aa\030\001 \002(\r\"\031\n\001b"
+    "\022\024\n\003aaa\030\001 \002(\0132\007.test.a", 62);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "test.proto", &protobuf_RegisterTypes);
   a::default_instance_ = new a();
@@ -121,7 +121,7 @@ struct StaticDescriptorInitializer_test_2eproto {
 // ===================================================================
 
 #ifndef _MSC_VER
-const int a::kAFieldNumber;
+const int a::kAaFieldNumber;
 #endif  // !_MSC_VER
 
 a::a()
@@ -142,7 +142,7 @@ a::a(const a& from)
 
 void a::SharedCtor() {
   _cached_size_ = 0;
-  a_ = 0u;
+  aa_ = 0u;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -178,7 +178,7 @@ a* a::New() const {
 }
 
 void a::Clear() {
-  a_ = 0u;
+  aa_ = 0u;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
 }
@@ -193,13 +193,13 @@ bool a::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required uint32 a = 1;
+      // required uint32 aa = 1;
       case 1: {
         if (tag == 8) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &a_)));
-          set_has_a();
+                 input, &aa_)));
+          set_has_aa();
         } else {
           goto handle_unusual;
         }
@@ -232,9 +232,9 @@ failure:
 void a::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:test.a)
-  // required uint32 a = 1;
-  if (has_a()) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->a(), output);
+  // required uint32 aa = 1;
+  if (has_aa()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->aa(), output);
   }
 
   if (!unknown_fields().empty()) {
@@ -247,9 +247,9 @@ void a::SerializeWithCachedSizes(
 ::google::protobuf::uint8* a::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:test.a)
-  // required uint32 a = 1;
-  if (has_a()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->a(), target);
+  // required uint32 aa = 1;
+  if (has_aa()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->aa(), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -264,11 +264,11 @@ int a::ByteSize() const {
   int total_size = 0;
 
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // required uint32 a = 1;
-    if (has_a()) {
+    // required uint32 aa = 1;
+    if (has_aa()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->a());
+          this->aa());
     }
 
   }
@@ -298,8 +298,8 @@ void a::MergeFrom(const ::google::protobuf::Message& from) {
 void a::MergeFrom(const a& from) {
   GOOGLE_CHECK_NE(&from, this);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_a()) {
-      set_a(from.a());
+    if (from.has_aa()) {
+      set_aa(from.aa());
     }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
@@ -325,7 +325,7 @@ bool a::IsInitialized() const {
 
 void a::Swap(a* other) {
   if (other != this) {
-    std::swap(a_, other->a_);
+    std::swap(aa_, other->aa_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -344,7 +344,7 @@ void a::Swap(a* other) {
 // ===================================================================
 
 #ifndef _MSC_VER
-const int b::kAaFieldNumber;
+const int b::kAaaFieldNumber;
 #endif  // !_MSC_VER
 
 b::b()
@@ -354,7 +354,7 @@ b::b()
 }
 
 void b::InitAsDefaultInstance() {
-  aa_ = const_cast< ::test::a*>(&::test::a::default_instance());
+  aaa_ = const_cast< ::test::a*>(&::test::a::default_instance());
 }
 
 b::b(const b& from)
@@ -366,7 +366,7 @@ b::b(const b& from)
 
 void b::SharedCtor() {
   _cached_size_ = 0;
-  aa_ = NULL;
+  aaa_ = NULL;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -377,7 +377,7 @@ b::~b() {
 
 void b::SharedDtor() {
   if (this != default_instance_) {
-    delete aa_;
+    delete aaa_;
   }
 }
 
@@ -403,8 +403,8 @@ b* b::New() const {
 }
 
 void b::Clear() {
-  if (has_aa()) {
-    if (aa_ != NULL) aa_->::test::a::Clear();
+  if (has_aaa()) {
+    if (aaa_ != NULL) aaa_->::test::a::Clear();
   }
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
@@ -420,11 +420,11 @@ bool b::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required .test.a aa = 1;
+      // required .test.a aaa = 1;
       case 1: {
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_aa()));
+               input, mutable_aaa()));
         } else {
           goto handle_unusual;
         }
@@ -457,10 +457,10 @@ failure:
 void b::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:test.b)
-  // required .test.a aa = 1;
-  if (has_aa()) {
+  // required .test.a aaa = 1;
+  if (has_aaa()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->aa(), output);
+      1, this->aaa(), output);
   }
 
   if (!unknown_fields().empty()) {
@@ -473,11 +473,11 @@ void b::SerializeWithCachedSizes(
 ::google::protobuf::uint8* b::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:test.b)
-  // required .test.a aa = 1;
-  if (has_aa()) {
+  // required .test.a aaa = 1;
+  if (has_aaa()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
-        1, this->aa(), target);
+        1, this->aaa(), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -492,11 +492,11 @@ int b::ByteSize() const {
   int total_size = 0;
 
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // required .test.a aa = 1;
-    if (has_aa()) {
+    // required .test.a aaa = 1;
+    if (has_aaa()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->aa());
+          this->aaa());
     }
 
   }
@@ -526,8 +526,8 @@ void b::MergeFrom(const ::google::protobuf::Message& from) {
 void b::MergeFrom(const b& from) {
   GOOGLE_CHECK_NE(&from, this);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_aa()) {
-      mutable_aa()->::test::a::MergeFrom(from.aa());
+    if (from.has_aaa()) {
+      mutable_aaa()->::test::a::MergeFrom(from.aaa());
     }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
@@ -548,15 +548,15 @@ void b::CopyFrom(const b& from) {
 bool b::IsInitialized() const {
   if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
 
-  if (has_aa()) {
-    if (!this->aa().IsInitialized()) return false;
+  if (has_aaa()) {
+    if (!this->aaa().IsInitialized()) return false;
   }
   return true;
 }
 
 void b::Swap(b* other) {
   if (other != this) {
-    std::swap(aa_, other->aa_);
+    std::swap(aaa_, other->aaa_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);

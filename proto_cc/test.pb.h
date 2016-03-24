@@ -91,23 +91,23 @@ class a : public ::google::protobuf::Message {
 
   // accessors -------------------------------------------------------
 
-  // required uint32 a = 1;
-  inline bool has_a() const;
-  inline void clear_a();
-  static const int kAFieldNumber = 1;
-  inline ::google::protobuf::uint32 a() const;
-  inline void set_a(::google::protobuf::uint32 value);
+  // required uint32 aa = 1;
+  inline bool has_aa() const;
+  inline void clear_aa();
+  static const int kAaFieldNumber = 1;
+  inline ::google::protobuf::uint32 aa() const;
+  inline void set_aa(::google::protobuf::uint32 value);
 
   // @@protoc_insertion_point(class_scope:test.a)
  private:
-  inline void set_has_a();
-  inline void clear_has_a();
+  inline void set_has_aa();
+  inline void clear_has_aa();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
   ::google::protobuf::uint32 _has_bits_[1];
   mutable int _cached_size_;
-  ::google::protobuf::uint32 a_;
+  ::google::protobuf::uint32 aa_;
   friend void  protobuf_AddDesc_test_2eproto();
   friend void protobuf_AssignDesc_test_2eproto();
   friend void protobuf_ShutdownFile_test_2eproto();
@@ -170,25 +170,25 @@ class b : public ::google::protobuf::Message {
 
   // accessors -------------------------------------------------------
 
-  // required .test.a aa = 1;
-  inline bool has_aa() const;
-  inline void clear_aa();
-  static const int kAaFieldNumber = 1;
-  inline const ::test::a& aa() const;
-  inline ::test::a* mutable_aa();
-  inline ::test::a* release_aa();
-  inline void set_allocated_aa(::test::a* aa);
+  // required .test.a aaa = 1;
+  inline bool has_aaa() const;
+  inline void clear_aaa();
+  static const int kAaaFieldNumber = 1;
+  inline const ::test::a& aaa() const;
+  inline ::test::a* mutable_aaa();
+  inline ::test::a* release_aaa();
+  inline void set_allocated_aaa(::test::a* aaa);
 
   // @@protoc_insertion_point(class_scope:test.b)
  private:
-  inline void set_has_aa();
-  inline void clear_has_aa();
+  inline void set_has_aaa();
+  inline void clear_has_aaa();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
   ::google::protobuf::uint32 _has_bits_[1];
   mutable int _cached_size_;
-  ::test::a* aa_;
+  ::test::a* aaa_;
   friend void  protobuf_AddDesc_test_2eproto();
   friend void protobuf_AssignDesc_test_2eproto();
   friend void protobuf_ShutdownFile_test_2eproto();
@@ -203,73 +203,73 @@ class b : public ::google::protobuf::Message {
 
 // a
 
-// required uint32 a = 1;
-inline bool a::has_a() const {
+// required uint32 aa = 1;
+inline bool a::has_aa() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void a::set_has_a() {
+inline void a::set_has_aa() {
   _has_bits_[0] |= 0x00000001u;
 }
-inline void a::clear_has_a() {
+inline void a::clear_has_aa() {
   _has_bits_[0] &= ~0x00000001u;
 }
-inline void a::clear_a() {
-  a_ = 0u;
-  clear_has_a();
+inline void a::clear_aa() {
+  aa_ = 0u;
+  clear_has_aa();
 }
-inline ::google::protobuf::uint32 a::a() const {
-  // @@protoc_insertion_point(field_get:test.a.a)
-  return a_;
+inline ::google::protobuf::uint32 a::aa() const {
+  // @@protoc_insertion_point(field_get:test.a.aa)
+  return aa_;
 }
-inline void a::set_a(::google::protobuf::uint32 value) {
-  set_has_a();
-  a_ = value;
-  // @@protoc_insertion_point(field_set:test.a.a)
+inline void a::set_aa(::google::protobuf::uint32 value) {
+  set_has_aa();
+  aa_ = value;
+  // @@protoc_insertion_point(field_set:test.a.aa)
 }
 
 // -------------------------------------------------------------------
 
 // b
 
-// required .test.a aa = 1;
-inline bool b::has_aa() const {
+// required .test.a aaa = 1;
+inline bool b::has_aaa() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void b::set_has_aa() {
+inline void b::set_has_aaa() {
   _has_bits_[0] |= 0x00000001u;
 }
-inline void b::clear_has_aa() {
+inline void b::clear_has_aaa() {
   _has_bits_[0] &= ~0x00000001u;
 }
-inline void b::clear_aa() {
-  if (aa_ != NULL) aa_->::test::a::Clear();
-  clear_has_aa();
+inline void b::clear_aaa() {
+  if (aaa_ != NULL) aaa_->::test::a::Clear();
+  clear_has_aaa();
 }
-inline const ::test::a& b::aa() const {
-  // @@protoc_insertion_point(field_get:test.b.aa)
-  return aa_ != NULL ? *aa_ : *default_instance_->aa_;
+inline const ::test::a& b::aaa() const {
+  // @@protoc_insertion_point(field_get:test.b.aaa)
+  return aaa_ != NULL ? *aaa_ : *default_instance_->aaa_;
 }
-inline ::test::a* b::mutable_aa() {
-  set_has_aa();
-  if (aa_ == NULL) aa_ = new ::test::a;
-  // @@protoc_insertion_point(field_mutable:test.b.aa)
-  return aa_;
+inline ::test::a* b::mutable_aaa() {
+  set_has_aaa();
+  if (aaa_ == NULL) aaa_ = new ::test::a;
+  // @@protoc_insertion_point(field_mutable:test.b.aaa)
+  return aaa_;
 }
-inline ::test::a* b::release_aa() {
-  clear_has_aa();
-  ::test::a* temp = aa_;
-  aa_ = NULL;
+inline ::test::a* b::release_aaa() {
+  clear_has_aaa();
+  ::test::a* temp = aaa_;
+  aaa_ = NULL;
   return temp;
 }
-inline void b::set_allocated_aa(::test::a* aa) {
-  delete aa_;
-  aa_ = aa;
-  if (aa) {
-    set_has_aa();
+inline void b::set_allocated_aaa(::test::a* aaa) {
+  delete aaa_;
+  aaa_ = aaa;
+  if (aaa) {
+    set_has_aaa();
   } else {
-    clear_has_aa();
+    clear_has_aaa();
   }
-  // @@protoc_insertion_point(field_set_allocated:test.b.aa)
+  // @@protoc_insertion_point(field_set_allocated:test.b.aaa)
 }
 
 

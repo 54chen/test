@@ -2,9 +2,9 @@ package test;
 
 
 message a{
-    required uint32 a    = 1;
+    required uint32 aa = 1;
 }
 
 message b{
-    required a aa		= 1;
+    required a aaa = 1;
 }
