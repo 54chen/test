@@ -1,0 +1,10 @@
+package test;
+
+
+message a{
+    required uint32 a    = 1;
+}
+
+message b{
+    required a aa		= 1;
+}
