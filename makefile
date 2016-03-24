@@ -3,8 +3,8 @@ CXX = g++
 CFLAGS = -g -O2 -Wall -fPIC -D_GNU_SOURCE -std=c++0x
 
 SRC=.
-PROTO_DIR= proto
-PROTO_CC_DIR= proto_cc
+PROTO_DIR= proto/
+PROTO_CC_DIR= proto_cc/
 INC  = -I include/ -I $(PROTO_CC_DIR) 
 LIB  = -L src -ldl -L lib/ -lprotobuf
 
@@ -21,7 +21,7 @@ $(BIN): $(OBJS)
 %.o: src/%.cc 
 	$(CXX) $(CFLAGS) $(INC) -c -o $@ $<
 	
-%.o: $(PROTO_CC_DIR).cc
+%.o: $(PROTO_CC_DIR)%.cc
 	$(CXX) $(CFLAGS) $(INC) -c -o $@ $<
 
 compile_pb:
